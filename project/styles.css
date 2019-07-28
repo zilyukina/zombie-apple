@@ -8,6 +8,9 @@ $brown-light: #90602F;
 $white: #FDFFC0;
 $back: #ffffff;
 
+$time: 2.5s;
+$function: infinite;
+
 body {
     margin: 0;
     padding: 0;
@@ -98,6 +101,7 @@ body {
         top: -105px;
         left: 143px;
         transform: skewX(-17deg);
+        border-radius: 20px;
     }
 
     &__highlight {
@@ -140,6 +144,8 @@ body {
         position: absolute;
         top: 60px;
         z-index: 1;
+        transform-origin: center top;
+        animation: eyes $time $function;
 
         &:before {
             content: '';
@@ -169,15 +175,18 @@ body {
         border-radius: 20px 20px 100px 100px;
         border: 10px solid $brown;
         z-index: 1;
+        transform-origin: center top;
+        animation: mouth $time $function;
     }
     &__teeth {
         position: absolute;
-        left: 3px;
-        top: 0;
+        left: 122px;
+        top: 126px;
         width: 24px;
         height: 11px;
         border-radius: 0 0 100px 100px;
         background: $white;
+        z-index: 1;
 
         &:before,
         &:after {
@@ -207,6 +216,8 @@ body {
     height: 54px;
     border-radius: 10px;
     z-index: 1;
+    transform-origin: center top;
+    animation: liquid $time $function;
 
     &:after {
         content: "";
@@ -217,6 +228,8 @@ body {
         position: absolute;
         background: inherit;
         border-radius: inherit;
+        transform-origin: center top;
+        animation: liquid $time $function;
     }
 }
 .holes{
@@ -247,5 +260,32 @@ body {
         width: 183px;
         height: 109px;
         transform: rotate(1deg);
+    }
+}
+
+@keyframes eyes {
+    0%, 86% {
+        transform: scaleY(1);
+    }
+    71% {
+        transform: scaleY(0.85);
+    }
+}
+
+@keyframes mouth {
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.1)
+    }
+}
+
+@keyframes liquid{
+    0%, 90%  {
+        transform: scaleY(1)
+    }
+    50%, 70% {
+        transform: scaleY(1.3)
     }
 }
