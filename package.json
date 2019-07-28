@@ -1,0 +1,35 @@
+{
+  "name": "css-art__happy-toaster",
+  "version": "1.0.0",
+  "description": "css-art__happy-toaster",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.6.1",
+    "browser-sync": "^2.26.7",
+    "cssnano": "^4.1.10",
+    "gulp-concat-multi": "^1.0.1",
+    "gulp-include": "^2.4.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-watch": "^5.0.1",
+    "postcss-inline-comment": "^3.0.0",
+    "postcss-nested": "^4.1.2",
+    "postcss-nested-ancestors": "^2.0.0",
+    "postcss-simple-vars": "^5.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zilyukina/css-art__coffee.git"
+  },
+  "author": "lilya zilyukina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zilyukina/css-art__coffee/issues"
+  },
+  "homepage": "https://github.com/zilyukina/css-art__coffee#readme"
+}
