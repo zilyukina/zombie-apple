@@ -29,8 +29,8 @@ body {
     }
 }
 .apple {
-    background: linear-gradient(to bottom, transparent 30%,#b8cb31 30%);
-    border: 10px solid #47271a;
+    background: linear-gradient(to bottom, transparent 30%, $green 30%);
+    border: 10px solid $brown;
     border-radius: 65px 65px 155px 155px;
     width: 329px;
     height: 232px;
@@ -54,7 +54,7 @@ body {
         top: -54px;
         width: 196px;
         height: 118px;
-        border: 10px solid #47271a;
+        border: 10px solid $brown;
         border-radius: 117px 99px 0px 0px;
     }
 
@@ -88,6 +88,16 @@ body {
             top: -10px;
             box-shadow: inset -28px -6px 0 -7px $green-shadow;
         }
+    }
+
+    &__tail {
+        position: absolute;
+        border-color: $brown transparent transparent;
+        border-style: solid;
+        border-width: 89px 17px;
+        top: -105px;
+        left: 143px;
+        transform: skewX(-17deg);
     }
 
     &__highlight {
@@ -126,7 +136,7 @@ body {
         border-radius: 100%;
         width: 27px;
         height: 25px;
-        background: #fdffc0;
+        background: $white;
         position: absolute;
         top: 60px;
         z-index: 1;
@@ -160,6 +170,54 @@ body {
         border: 10px solid $brown;
         z-index: 1;
     }
+    &__teeth {
+        position: absolute;
+        left: 3px;
+        top: 0;
+        width: 24px;
+        height: 11px;
+        border-radius: 0 0 100px 100px;
+        background: $white;
+
+        &:before,
+        &:after {
+            content: '';
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 24px;
+            height: 11px;
+            border-radius: 0 0 100px 100px;
+            background: inherit;
+        }
+        &:before {
+            left: 29px;
+        }
+        &:after {
+            left: 59px;
+        }
+    }
+}
+.liquid {
+    position: absolute;
+    top: 148px;
+    left: 168px;
+    background: $green-light;
+    width: 20px;
+    height: 54px;
+    border-radius: 10px;
+    z-index: 1;
+
+    &:after {
+        content: "";
+        top: 0;
+        left: 29px;
+        width: 14px;
+        height: 36px;
+        position: absolute;
+        background: inherit;
+        border-radius: inherit;
+    }
 }
 .holes{
     position: absolute;
@@ -172,7 +230,7 @@ body {
 .hole {
     position: absolute;
     border-radius: 100%;
-    border: 10px solid #47271a;
+    border: 10px solid $brown;
     background: $back;
     width: 146px;
     height: 108px;
