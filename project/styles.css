@@ -6,9 +6,12 @@ $green-medium: #B2C535;
 $brown: #47271A;
 $brown-light: #90602F;
 $white: #FDFFC0;
+$back: #ffffff;
+
 body {
     margin: 0;
     padding: 0;
+    background: $back;
 }
 .wrapper {
     width: 100vw;
@@ -79,8 +82,112 @@ body {
             border-radius: 103px 40px 40px 100px;
         }
         &:after {
-            border-radius: 40px 100px 103px 40px;
+            border-radius: 106px 223px 295px 0px;
             right: -161px;
+            height: 276px;
+            top: -10px;
+            box-shadow: inset -28px -6px 0 -7px $green-shadow;
         }
+    }
+
+    &__highlight {
+        border: 15px solid $green-highlight;
+        position: absolute;
+        left: -90px;
+        top: 0;
+        height: 146px;
+        width: 100px;
+        border-radius: 100%;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        transform: rotate(34deg);
+
+        &:before,
+        &:after {
+            content: '';
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            border-radius: 100%;
+            background: $green-highlight;
+        }
+        &:after {
+            top: 7px;
+            left: 3px
+        }
+        &:before {
+            top: 127px;
+            left: 5px;
+        }
+    }
+    &__eye {
+        border: 8px solid $brown;
+        border-radius: 100%;
+        width: 27px;
+        height: 25px;
+        background: #fdffc0;
+        position: absolute;
+        top: 60px;
+        z-index: 1;
+
+        &:before {
+            content: '';
+            bottom: -8px;
+            height: 8px;
+            background: $brown;
+            left: -13px;
+            right: -14px;
+            position: absolute;
+            border-radius: 7px;
+        }
+
+        &--right {
+            right: 54px;
+        }
+        &--left {
+            left: 54px;
+        }
+    }
+    &__mouth {
+        background: $brown;
+        position: absolute;
+        left: 111px;
+        top: 116px;
+        width: 87px;
+        height: 27px;
+        border-radius: 20px 20px 100px 100px;
+        border: 10px solid $brown;
+        z-index: 1;
+    }
+}
+.holes{
+    position: absolute;
+    top: -75px;
+    left: 365px;
+    width: 153px;
+    height: 145px;
+    z-index: 1;
+}
+.hole {
+    position: absolute;
+    border-radius: 100%;
+    border: 10px solid #47271a;
+    background: $back;
+    width: 146px;
+    height: 108px;
+    transform: rotate(35deg);
+    top: -12px;
+    left: -1px;
+
+    &:before {
+        content: '';
+        position: absolute;
+        background: $back;
+        top: -32px;
+        left: -19px;
+        width: 183px;
+        height: 109px;
+        transform: rotate(1deg);
     }
 }
